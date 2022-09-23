@@ -1,0 +1,374 @@
+{
+    "info": {
+        "_postman_id": "e8ad44ee-7536-4901-913c-46e718d56d9f",
+        "name": "udacity-fsnd-udaspicelatte",
+                "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "barista",
+            "item": [
+                    {
+                        "name": "/drinks",
+                        "event": [
+                            {
+                                "listen": "test",
+                                "script": {
+                                    "id": "05cea6f9-9af0-4e60-9aad-4c8faf37ef4c",
+                                    "exec": [
+                                        "pm.test(\"Status code is 200\", function () {",
+                                        "    pm.response.to.have.status(200);",
+                                        "});",
+                                        "",
+                                        "pm.test(\"value contains drinks array\", function () {",
+                                        "    var jsonData = pm.response.json();",
+                                        "    pm.expect(jsonData.drinks).to.be.an('array')",
+                                        "});"
+                                    ],
+                                    "type": "text/javascript"
+                                }
+                            }
+                        ],
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/drinks",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "drinks"
+                                ]
+                            }
+                        },
+                        "response": []
+                    },
+                {
+                        "name": "/drinks-detail",
+                        "event": [
+                            {
+                                "listen": "test",
+                                "script": {
+                                    "id": "65a195fa-a734-44b7-a7e0-c629b32d1fbb",
+                                    "exec": [
+                                        "pm.test(\"Status code is 200\", function () {",
+                                        "    pm.response.to.have.status(200);",
+                                        "});"
+                                    ],
+                                    "type": "text/javascript"
+                                }
+                            }
+                        ],
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/drinks-detail",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "drinks-detail"
+                                ]
+                            }
+                        },
+                        "response": []
+                        }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [
+                    {
+                        "key": "token",
+                        "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkMxOTdSSFFlTk1aZDI3OTdLZDF6UiJ9.eyJpc3MiOiJodHRwczovL2hvdGxvdi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMyNjkzMTk0NWQ3NTliYjQzNThlZDBlIiwiYXVkIjoiY29mZmVlc2hvcCIsImlhdCI6MTY2Mzg4Njc1NSwiZXhwIjoxNjYzODkzOTU1LCJhenAiOiJsd1dPb1FJQ25Oc2ZWTmpUeWNpZmpFZUhXaVA2RnRtVyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIl19.RTzdotIL0wQBLY_36F8LeswfdZGQ71_fiKsFdhon35b54icEw4kGHI0G1AnmMDq-qZPH2y_FmEfMBvjlhiaMFBYj-etVLXQdFopZtXsBgWVEXRz2wfiZhrA1EfEHD_QVJMHIlOoBuMPedaCWWoq72Jrtr0d6pE702KEk5OunHOxo_4_MAhm8CSglhool8mLnEl06gHAroC33H_KSM73YZezy1Ia_93lHaqS72uGGI3ick-jQI68rFBeHy5Li_Sn25ZUMrCGqJrbgDn8K_yBG7W8zn-_kdbiVEANSenBPc9gl1yKygBh8wUqoPAivlGPl6VtWfqI5iArcY-ciOZacEQ",
+                        "type": "string"
+                    }
+                ]
+            },
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "f985b22c-34c4-4cfe-8308-f6fb98d799ac",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "596425ac-59b4-4488-9f07-4c748e1ad082",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "manager",
+            "item": [
+                    {
+                        "name": "/drinks",
+                        "event": [
+                            {
+                                "listen": "test",
+                                "script": {
+                                    "id": "05cea6f9-9af0-4e60-9aad-4c8faf37ef4c",
+                                    "exec": [
+                                        "pm.test(\"Status code is 200\", function () {",
+                                        "    pm.response.to.have.status(200);",
+                                        "});",
+                                        "",
+                                        "pm.test(\"value contains drinks array\", function () {",
+                                        "    var jsonData = pm.response.json();",
+                                        "    pm.expect(jsonData.drinks).to.be.an('array')",
+                                        "});"
+                                    ],
+                                    "type": "text/javascript"
+                                }
+                            }
+                        ],
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/drinks",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "drinks"
+                                ]
+                            }
+                        },
+                        "response": []
+                    },
+                {
+                        "name": "/drinks-detail",
+                        "event": [
+                            {
+                                "listen": "test",
+                                "script": {
+                                    "id": "65a195fa-a734-44b7-a7e0-c629b32d1fbb",
+                                    "exec": [
+                                        "pm.test(\"Status code is 200\", function () {",
+                                        "    pm.response.to.have.status(200);",
+                                        "});",
+                                        "",
+                                        "pm.test(\"value contains drinks array\", function () {",
+                                        "    var jsonData = pm.response.json();",
+                                        "    pm.expect(jsonData.drinks).to.be.an('array')",
+                                        "});"
+                                    ],
+                                    "type": "text/javascript"
+                                }
+                            }
+                        ],
+                        "request": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/drinks-detail",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "drinks-detail"
+                                ]
+                            }
+                        },
+                        "response": []
+                        },
+                {
+                        "name": "/drinks",
+                        "event": [
+                            {
+                                "listen": "test",
+                                "script": {
+                                    "id": "5050a5b9-2e15-474e-9981-0e61ec8d2ff1",
+                                    "exec": [
+                                        "pm.test(\"Status code is 200\", function () {",
+                                        "    pm.response.to.have.status(200);",
+                                        "});"
+                                    ],
+                                    "type": "text/javascript"
+                                }
+                            }
+                        ],
+                        "request": {
+                            "method": "POST",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "name": "Content-Type",
+                                    "value": "application/json",
+                                    "type": "text"
+                                }
+                            ],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"title\": \"Water3\",\n    \"recipe\": {\n        \"name\": \"Water\",\n        \"color\": \"blue\",\n        \"parts\": 1\n    }\n}"
+                            },
+                            "url": {
+                                "raw": "{{host}}/drinks",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "drinks"
+                                ]
+                            }
+                        },
+                        "response": []
+                        },
+                {
+                        "name": "/drinks/1",
+                        "event": [
+                            {
+                                "listen": "test",
+                                "script": {
+                                    "id": "ec1488aa-b4d7-468a-89f5-03484009e69c",
+                                    "exec": [
+                                        "pm.test(\"Status code is 200\", function () {",
+                                        "    pm.response.to.have.status(200);",
+                                        "});",
+                                        "",
+                                        "pm.test(\"value contains drinks array\", function () {",
+                                        "    var jsonData = pm.response.json();",
+                                        "    pm.expect(jsonData.drinks).to.be.an('array')",
+                                        "});"
+                                    ],
+                                    "type": "text/javascript"
+                                }
+                            }
+                        ],
+                        "request": {
+                            "method": "PATCH",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "name": "Content-Type",
+                                    "value": "application/json",
+                                    "type": "text"
+                                }
+                            ],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"title\": \"Water5\"\n}"
+                            },
+                            "url": {
+                                "raw": "{{host}}/drinks/1",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "drinks",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "response": []
+                        },
+                {
+                        "name": "/drinks/1",
+                        "event": [
+                            {
+                                "listen": "test",
+                                "script": {
+                                    "id": "0aea66ad-0a6e-4533-b192-a8b0af746c78",
+                                    "exec": [
+                                        "pm.test(\"Status code is 200\", function () {",
+                                        "    pm.response.to.have.status(200);",
+                                        "});"
+                                    ],
+                                    "type": "text/javascript"
+                                }
+                            }
+                        ],
+                        "request": {
+                            "method": "DELETE",
+                            "header": [],
+                            "url": {
+                                "raw": "{{host}}/drinks/1",
+                                "host": [
+                                    "{{host}}"
+                                ],
+                                "path": [
+                                    "drinks",
+                                    "1"
+                                ]
+                            }
+                        },
+                        "response": []
+                        }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [
+                    {
+                        "key": "token",
+                        "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkMxOTdSSFFlTk1aZDI3OTdLZDF6UiJ9.eyJpc3MiOiJodHRwczovL2hvdGxvdi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjMyNjk1MmM0NWQ3NTliYjQzNThlZDEzIiwiYXVkIjoiY29mZmVlc2hvcCIsImlhdCI6MTY2Mzg4NzE2NSwiZXhwIjoxNjYzODk0MzY1LCJhenAiOiJsd1dPb1FJQ25Oc2ZWTmpUeWNpZmpFZUhXaVA2RnRtVyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmRyaW5rcyIsImdldDpkcmlua3MiLCJnZXQ6ZHJpbmtzLWRldGFpbCIsInBhdGNoOmRyaW5rcyIsInBvc3Q6ZHJpbmtzIl19.Qo-dumeLa7BEDxE_nxUtazzK8OjINDmW6kGGJAM2mNDuzIpqsuOkwHEy4uzglJsDGSAy9aCS4NUeo5Jyec4UzMj6ce9_sRK2N6uLMRAEf_Pz2zpqE0DwZdxj6VvHhxMfNi781OWpSm-fVd-evpXX7kuzZXNiUH9fWgDixjbSkM7rBUq_anMtQoxrBQDkBsttmlRFbs8_uGdWTb_iK0oWKcFUcmV3Ta8jMs3OV6mApTxNF7CLb3pWi4gX7ar7wHYZfLprsw-SDy68r_LQZ3rsPojb8w8dnXVWSuIHZn7cjo-D1rYiFn-8tVZA8-AiqllM3YWfw6sH48DiPIjmGihfUQ",
+                        "type": "string"
+                    }
+                ]
+            },
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "113ee6fe-418d-4bf4-a641-444b5816e46b",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "5704da6d-dc7e-42b9-8214-aa7ecf075bca",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "id": "fc871e59-eaa4-46e8-975b-87b750ad1804",
+                "type": "text/javascript",
+                "exec": [
+                        ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "id": "e5766f23-c7f1-472b-ae34-825a91147815",
+                "type": "text/javascript",
+                "exec": [
+                        ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "id": "7da0fa13-ecd9-4d7d-8e38-fde2c81cfdaf",
+            "key": "host",
+            "value": "localhost:5000",
+            "type": "string"
+        }
+    ]
+}
