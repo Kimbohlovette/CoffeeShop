@@ -1,7 +1,7 @@
 # Coffee-Shop
 Coffe Shop is new digitally enabled coffee shop where students can order drinks, socialize, and study.
 
-##Setup instructions
+## Setup instructions
 
 In order to setup and run the CoffeeShop application on your local machine, follow the following instructions
 
@@ -21,31 +21,31 @@ In the project directory, there are two main subfolders
 
 ### Backend setup instructions
 
-Run `cd backend` to navigate into the backend project directory
+- Run `cd backend` to navigate into the backend project directory
 
-Create a python virtual environment with the following command
+- Create a python virtual environment with the following command
 
 `python -m venv venv`
 
-Run `source venv/bin/activate` to activate the virtual environment. Use `deactivate` command to deactivate your virtual environment.
+- Run `source venv/bin/activate` to activate the virtual environment. Use `deactivate` command to deactivate your virtual environment.
 
-**Note** Be sure to install the following Flask, SQLAlchemy, jose
+**Note** *Be sure to install the following Flask, SQLAlchemy, jose*
 
-Assumming that pip is installed in your system, install python packages to be used by flask app.
+- Assumming that pip is installed in your system, install python packages to be used by flask app.
 
 `pip install -r requirements.txt`
 
-After all requirements are installed, run
+- After all requirements are installed, run
 
 `FLASK_APP=src/api.py FLASK_DEBUG=1 flask run` to start the application.
 
 
 ### Frontend setup instructions
 
-**Note** Be sure that you have installed Angular version from 13 above and ionic 6 or above globally in your local machine.
+**Note** *Be sure that both Angular version from 13 above and ionic 6 or above are installed globally in your local machine*
 
-Run `cd frontend` command to navigate to the frontend directory
+- Run `cd frontend` command to navigate to the frontend directory
 
-Run `npm install` to install all application dependencies/libraries
+- Run `npm install` to install all application dependencies/libraries
 
-Start the frontend server with `ionic serve`
+- Start the frontend server with `ionic serve`
