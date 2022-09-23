@@ -59,14 +59,16 @@ def get_long_drinks():
 def create_drink():
     body = request.get_json()
 
-    recipe = body.get('recipe')
-    new_drink = Drink(title=body.get('title'), recipe=json.dumps(recipe))
+    title = body.get('title', None)
+    recipe = body.get('recipe', None)
+
+    new_drink = Drink(title=title, recipe=json.dumps(recipe))
     new_long_drink = new_drink.long()
     try:
         Drink.insert(new_drink)
         return jsonify({
             'success': True,
-            'drinks': new_long_drink
+            'drinks': [new_long_drink]
         })
     except BaseException:
         abort(422)
@@ -76,11 +78,14 @@ def create_drink():
 def update_drink(id):
     body = request.get_json()
 
+    title = body.get('title', None)
+    recipe = body.get('recipe', None)
+
     try:
         drink = Drink.query.filter(Drink.id == id).one_or_none()
 
-        drink.title = body.get('title')
-        drink.recipe = json.dumps(body.get('recipe'))
+        drink.title = title
+        drink.recipe = json.dumps(recipe)
         drink.update()
         return jsonify({
             "success": True,

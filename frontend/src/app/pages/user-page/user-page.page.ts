@@ -8,12 +8,15 @@ import { AuthService } from '../../services/auth.service';
 })
 export class UserPagePage implements OnInit {
   loginURL: string;
+  logoutURL: string;
 
   constructor(public auth: AuthService) {
     this.loginURL = auth.build_login_link('/tabs/user-page');
+    this.logoutURL = auth.build_logout_link('http://localhost:5000/logout')
   }
 
   ngOnInit() {
   }
+
 
 }
