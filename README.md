@@ -1,5 +1,7 @@
 # Coffee-Shop
 Coffe Shop is new digitally enabled coffee shop where students can order drinks, socialize, and study.
+This application is a full stack flask/Angular/Ionic web application that demonstrates my understanding of writing flask api's, consumming the api's in the frontend.
+It also demonstrates strong understanding of JWT, Authentication and Access Control and the use of third party authentication (Auth0) and how to set up User Authorization using Auth0.
 
 ## Setup instructions
 
